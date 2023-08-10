@@ -45,7 +45,8 @@ function rot13(encodedStr) {
 			changedChar = char;
 		}
 		
-		decodedArr.push(changedChar);
+		// decodedArr.push(changedChar);
+		decodedArr[i]=changedChar;
 	}
 
   return decodedArr; //return decodedArr
