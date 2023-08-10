@@ -38,10 +38,10 @@ function rot13(encodedStr) {
 	for(let i=0;i<size;i++){
 		const char = encodedStr[i];
 		
-		decodedArr.push(lookup[char] || char);
+		decodedArr.push(lookup[char] || char);  // Push decoded character or original character
 	}
 
-  return decodedArr.join(""); //return decodedArr
+  return decodedArr; //return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
