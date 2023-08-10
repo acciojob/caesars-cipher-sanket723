@@ -37,24 +37,16 @@ function rot13(encodedStr) {
 	let size = encodedStr.length;
 	for(let i=0;i<size;i++){
 		let char = encodedStr[i];
-		let changedChar;
-		if(lookup.char){
-			changedChar = lookup.char;
-		}
-		else{
-			changedChar = char;
-		}
 		
-		// decodedArr.push(changedChar);
-		decodedArr[i]=changedChar;
+		decodedArr.push(lookup[char] || char);
 	}
 
-  return decodedArr; //return decodedArr
+  return decodedArr.join(""); //return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-console.log(rot13("SERR YBIR? NPPVBWBO"));
+// console.log(rot13("SERR YBIR? NPPVBWBO"));
 
 // Do not change this line
 window.rot13 = rot13;
