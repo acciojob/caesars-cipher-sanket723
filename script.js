@@ -37,7 +37,14 @@ function rot13(encodedStr) {
 	let size = encodedStr.length;
 	for(let i=0;i<size;i++){
 		let char = encodedStr[i];
-		let changedChar = lookup.char;
+		let changedChar;
+		if(lookup.char){
+			changedChar = lookup.char;
+		}
+		else{
+			changedChar = char;
+		}
+		
 		decodedArr.push(changedChar);
 	}
 
