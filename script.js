@@ -36,7 +36,7 @@ function rot13(encodedStr) {
   // Only change code below this line
 	let size = encodedStr.length;
 	for(let i=0;i<size;i++){
-		let char = encodedStr[i];
+		const char = encodedStr[i];
 		
 		decodedArr.push(lookup[char] || char);
 	}
